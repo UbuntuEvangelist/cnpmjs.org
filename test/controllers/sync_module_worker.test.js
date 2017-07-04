@@ -347,6 +347,7 @@ describe('test/controllers/sync_module_worker.test.js', () => {
       const worker = new SyncModuleWorker({
         name: 'ms',
         username: 'fengmk2',
+        noDep: true,
       });
       worker.start();
       const end = thunkify.event(worker, 'end');
@@ -366,6 +367,7 @@ describe('test/controllers/sync_module_worker.test.js', () => {
       var worker = new SyncModuleWorker({
         name: 'ms',
         username: 'fengmk2',
+        noDep: true,
       });
       worker.start();
       const end = thunkify.event(worker, 'end');
